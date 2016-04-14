@@ -1,31 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.ozexpert.devicemeta" version="0.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-	<name>DeviceMeta</name>
-	<description>Some Device Meta Information for Cordova Apps</description>
+<plugin id="cordova-plugin-androidisdebug" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>AndroidIsDebug</name>
+	<description>Android debug status for Cordova Apps</description>
 	<license>Apache 2.0</license>
 
-	<js-module name="DeviceMeta" src="www/DeviceMeta.js">
-		<clobbers target="cordova.plugins.DeviceMeta" />
+	<js-module name="AndroidIsDebug" src="www/AndroidIsDebug.js">
+		<clobbers target="cordova.plugins.AndroidIsDebug" />
 	</js-module>
 
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="DeviceMeta">
-				<param name="android-package" value="com.ozexpert.devicemeta.DeviceMeta" />
+			<feature name="AndroidIsDebug">
+				<param name="android-package" value="com.d-mobilelab.AndroidIsDebug" />
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
 
-		<source-file src="src/android/DeviceMeta.java" target-dir="src/com/ozexpert/devicemeta/DeviceMeta" />
-		<source-file src="src/android/Utils.java" target-dir="src/com/ozexpert/devicemeta/Utils" />
-	</platform>
-	<platform name="ios">
-		<config-file parent="/*" target="config.xml">
-			<feature name="DeviceMeta">
-				<param name="ios-package" value="DeviceMeta" />
-			</feature>
-		</config-file>
-		<source-file src="src/ios/DeviceMeta.h" />
-		<source-file src="src/ios/DeviceMeta.m" />
+		<source-file src="src/android/AndroidIsDebug.java" target-dir="src/com/d-mobilelab/AndroidIsDebug" />
 	</platform>
 </plugin>
