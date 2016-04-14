@@ -11,11 +11,11 @@
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="AndroidIsDebug">
-				<param name="android-package" value="com.d-mobilelab.AndroidIsDebug" />
+				<param name="android-package" value="com.dmobilelab.AndroidIsDebug" />
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
 
-		<source-file src="src/android/AndroidIsDebug.java" target-dir="src/com/d-mobilelab/AndroidIsDebug" />
+		<source-file src="src/android/AndroidIsDebug.java" target-dir="src/com/dmobilelab" />
 	</platform>
 </plugin>
