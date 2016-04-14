@@ -15,7 +15,7 @@ import org.json.JSONObject;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class AndroidIsDebug extends CordovaPlugin {
+public class AppIsDebug extends CordovaPlugin {
 
     private static Context ctx;
 
@@ -24,7 +24,7 @@ public class AndroidIsDebug extends CordovaPlugin {
 
         ctx = this.cordova.getActivity().getApplicationContext();
 
-        if (action.equals("isDebug")) {
+        if (action.equals("get")) {
             
             JSONObject r = new JSONObject();
             r.put("debug", this.isDebug());

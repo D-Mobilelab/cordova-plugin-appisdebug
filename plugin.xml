@@ -1,21 +1,32 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-androidisdebug" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-appisdebug" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>AndroidIsDebug</name>
-	<description>Android debug status for Cordova Apps</description>
+	<description>App debug status for Cordova Apps</description>
 	<license>Apache 2.0</license>
 
-	<js-module name="AndroidIsDebug" src="www/AndroidIsDebug.js">
-		<clobbers target="cordova.plugins.AndroidIsDebug" />
+	<js-module name="AppIsDebug" src="www/AppIsDebug.js">
+		<clobbers target="cordova.plugins.AppIsDebug" />
 	</js-module>
 
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="AndroidIsDebug">
-				<param name="android-package" value="com.dmobilelab.AndroidIsDebug" />
+			<feature name="AppIsDebug">
+				<param name="android-package" value="com.dmobilelab.AppIsDebug" />
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
 
-		<source-file src="src/android/AndroidIsDebug.java" target-dir="src/com/dmobilelab" />
+		<source-file src="src/android/AppIsDebug.java" target-dir="src/com/dmobilelab" />
 	</platform>
+    
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="AppIsDebug">
+				<param name="ios-package" value="AppIsDebug" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/AppIsDebug.h" />
+		<source-file src="src/ios/AppIsDebug.m" />
+	</platform>
+
 </plugin>
