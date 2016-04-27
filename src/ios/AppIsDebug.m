@@ -3,7 +3,7 @@
 
 @implementation AppIsDebug
 
-- (CDVPluginResult *)get:(CDVInvokedUrlCommand*)command
+- (void)get:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
     NSDictionary* deviceProperties = [self deviceProperties];
